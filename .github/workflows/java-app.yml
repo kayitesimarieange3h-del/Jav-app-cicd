@@ -26,7 +26,7 @@ env:
 
 jobs:
 
-sonar:
+ sonar:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -71,7 +71,7 @@ sonar:
           SONAR_HOST_URL: ${{ env.SONAR_HOST_URL }}
         #run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=geo_app -Dsonar.qualitygate.wait=true
         run:  mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=geo_app -Dsonar.projectName=geo_app
-    build:
+ build:
 
      runs-on: ubuntu-latest
      needs: sonar
